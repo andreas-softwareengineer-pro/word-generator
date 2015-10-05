@@ -1,0 +1,118 @@
+body {
+	- background-color: #fff0d0;
+	background-color: #eeeeee;
+}
+
+iframe {
+	background-color: #ffffdf;
+}
+
+input[type=range] {
+    position:relative;
+    top: 100px;
+    width: 150px;
+    height: 10px;
+    border: 0
+    fill-color: red
+
+    -webkit-transform: rotate(270deg);
+       -moz-transform: rotate(270deg);
+            transform: rotate(270deg);
+}
+
+input[type=range]::-ms-fill-lower {
+    background: red;
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: #faa;
+}
+
+.cover{
+	position:fixed; top:0; left:0;
+	background:rgba(0,0,0,0.6);
+	z-index:5;
+	width:100%;
+	height:100%;
+	display:none;
+}
+
+.hint {
+	height:420px;
+	width:340px;
+	margin:0 auto;
+	position:absolute;
+	z-index:10;
+	display:none;
+	background-color: #d0d080;
+	color: black;
+	border:5px solid #cccccc;
+	border-radius:10px;
+}
+
+.hint:target, .hint:target + .cover{
+	display:block;
+	opacity:2;
+}
+ - See more at: http://www.corelangs.com/css/box/fulloverlay.html#sthash.ZGmWwL8y.dpuf
+
+A:link {text-decoration: none; color: #003366;} 
+A:visited {text-decoration: none; border:0; color: #666666;} 
+A:hover {text-decoration: underline; color: #993300;}
+A:active {color: #993300;} 
+
+table.option_table, table.option_table tr {
+   	border-collapse: collapse;
+	border-style: solid;
+	border-color: grey;
+	border-width: 1px;
+	height: 100%;
+	- background-color: #ffffd0;
+	background-color: #ffffff;
+}
+
+.footer-note {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-align: center;
+    font-weight: bold;
+    color: #0000a0;
+    font-size: 80%;	
+}
+.footer {
+	margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    text-align: center;
+    font-size: 80%;	
+}
+
+table .dict_hit {
+	color: white;
+	background-color: black;
+}
+
+.small_btn {
+	background-color: white;
+	border-width: 1px;
+	border-color: #888;
+	font-size: 85%;
+	font-family: Helvetica;
+	border-radius: 5px;
+}
+
+.warnings {
+	border-color: grey;
+	border-width: 2px;
+	background-color: #ffff00;
+}
+
+.rack_handle {
+	padding-right: 7pt;
+	text-align: right;
+}
+
+.hdr_info {
+	padding-right: 12pt;
+	text-align: right;
+}
