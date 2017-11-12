@@ -1,6 +1,7 @@
-<?php header("Content-type: text/html; encoding=utf-8");
+<?php
   //error_reporting(E_ALL); //for debugging
-  session_start();
+  session_start();
+  header("Content-type: text/html; encoding=utf-8");
   if (!isSet($_SESSION['generated_words']))
   {
 	  $_SESSION['generated_words'] = array();
