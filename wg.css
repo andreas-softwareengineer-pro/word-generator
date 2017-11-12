@@ -1,10 +1,10 @@
+iframe,body.output {
+	background-color: #ffffdf;
+}
+
 body {
 	- background-color: #fff0d0;
 	background-color: #eeeeee;
-}
-
-iframe {
-	background-color: #ffffdf;
 }
 
 input[type=range] {
@@ -25,6 +25,10 @@ input[type=range]::-ms-fill-lower {
 }
 input[type=range]:focus::-ms-fill-upper {
     background: #faa;
+}
+
+#wg_form {
+	margin-bottom: 3px;
 }
 
 .cover{
@@ -55,10 +59,16 @@ input[type=range]:focus::-ms-fill-upper {
 }
  - See more at: http://www.corelangs.com/css/box/fulloverlay.html#sthash.ZGmWwL8y.dpuf
 
-A:link {text-decoration: none; color: #003366;} 
-A:visited {text-decoration: none; border:0; color: #666666;} 
-A:hover {text-decoration: underline; color: #993300;}
-A:active {color: #993300;} 
+.hint_a:link,.hint_a:visited {text-decoration: none; color: #002050} 
+.hint_a:hover {text-decoration: underline; color: #003080;}
+.hint_a:active {color:  #003080;} 
+.person_a:link {text-decoration: none; color: black;} 
+.person:visited {text-decoration: none; color: #202040;} 
+.person_a:hover {text-decoration: underline; color: #204060;}
+.person_a:active {color: #204060;} 
+.control_a:link,.control_a:visited {color: #441800;} 
+.control_a:hover {text-decoration: underline; color: #993300;}
+.control_a:active {color: #993300;} 
 
 table.option_table, table.option_table tr {
    	border-collapse: collapse;
@@ -89,7 +99,7 @@ table.option_table, table.option_table tr {
 
 table .dict_hit {
 	color: white;
-	background-color: black;
+	background-color: #606060;
 }
 
 .small_btn {
@@ -107,6 +117,10 @@ table .dict_hit {
 	background-color: #ffff00;
 }
 
+.infos {
+	background-color: #e0f0ff;
+}
+
 .rack_handle {
 	padding-right: 7pt;
 	text-align: right;
@@ -116,3 +130,34 @@ table .dict_hit {
 	padding-right: 12pt;
 	text-align: right;
 }
+
+table.result {
+	width:97%;
+	background-color: white;
+	border: 1;
+	border-color: #d0d0d0;
+	outline: 2pt solid #0000ff;
+	margin: 5pt;
+}
+
+.param_name {
+}
+
+.param_value {
+	background-color: #ffff70;
+}
+
+.this_result {
+	background-color: #ffff90;
+}
+
+.other_result {
+	background-color: #ffa0ff;
+}
+
+.param_header {
+	background-color: #e0e0e0
+	color: #ffffe0;
+}
+
+

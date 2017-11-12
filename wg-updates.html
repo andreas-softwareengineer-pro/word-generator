@@ -1,26 +1,37 @@
 <HTML>
-<TITLE>Word Generator updates</TITLE>
+<TITLE>Word Generator</TITLE>
 <HEAD>
 <link type="text/css" rel="stylesheet" href="/wg.css" media="all" /> 
-<font size=+2>Word Generator updates</font>
 </HEAD>
 <BODY>
+<H1>Word Generator info & updates</H1>
 <HR>
+<H2>Info</H2>
+Word Generator is an application that serves to model candidate words that might belong to a given language based on phonotactic rules learnt from an existing sample dictionary.
+<A HREF="wg_note.pdf" ><H3>Explanatory note &#x00BB;</H3></A>
+<BR>
+<B>The underlying algorithm and evaluation results were presented in this paper:</B>
+<BR>
+<A href="http://www.aclweb.org/anthology/U16-1009">Shcherbakov, A., Vylomova, E. and Thieberger, N., 2016. Phonotactic Modeling of Extremely Low Resource Languages. In Proceedings of the Australasian Language Technology Association Workshop 2016 (pp. 84-93).</A>
+<H2>Support contacts</H2>
+<A HREF="http://www.andreas.ru" class="person_a"> Andreas Scherbakov</A> and <A HREF="http://www.nthieberger.net" class="person_a">Nick Thieberger</A>
+<H2>Most recent updates</H2>
 <UL>
-
+<LI>v0.3	10 Nov 2017
+<UL>
+<LI>Auto detection of vowels is added (using <A HREF="https://en.wikipedia.org/wiki/Sukhotin%27s_algorithm">Sukhotin's algorithm</A>)
+<LI>Precision evalation feature is added
+<LI>Links to WG page with particular parameter settings are enabled.
+<LI>Gradual control for on-the-fly pruning feature is added.
+<LI>Web page layout is made a bit more mobile device friendly.
 <LI>v0.3	1 Jun 2015
-<UL>
-<LI>Code optimizations (~4.5x Speedup)
-<LI>An uniform calculation of word probability scores</LI>
-<LI>Breaking words into multiple samples at dashes etc. (semi-formal -> {semi, formal})</LI>
-<LI>Panel colors changed</LI>
 </UL>
-</LI><LI>v1.1	2 Oct 2015
+<LI style="margin-top:20pt;">v1.1	2 Oct 2015
 <UL>
 <LI>Vowel confidence level calculation
 <LI>An Explanatory Note added</LI>
 </UL>
-</LI>
+
 
 </UL>
 </BODY>
