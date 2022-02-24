@@ -131,7 +131,7 @@ inline void trim(std::string &s) { trim(s, " \r\t\n"); }
 inline void trim(std::wstring &s) { trim(s, L" \r\t\n"); }
 
 template <class E> struct more {
-  bool operator()(const E &x, const E &y) { return x > y; }
+  bool operator()(const E &x, const E &y) const { return x > y; }
 };
 
 inline wchar_t wproc(wchar_t c) { return towlower(c); }
@@ -336,7 +336,7 @@ struct phon {
 	}
   }
   bool isUniq() { return uniq; }
-  bool setUniq() {
+  void setUniq() {
 	uniq = true;
 	VCset = false;
   }
@@ -416,6 +416,8 @@ struct Scale {
 	  return (x - lower_x) / (upper_x - lower_x) * (upper - lower) + lower;
 	case I_CONST:
 	  return lower;
+        default:
+	  assert(false);
 	}
   }
   void skip_sep(const char *&c, InterpolationType &interpolation) {
@@ -1564,6 +1566,8 @@ double abstractedProbability(Selector *s, const WGConfig &conf, int nabs,
 	remainder *= s->nxt.size() * conf.smoothing_delta / s->count;
 	return (probability - remainder) * factor * ABS_SCORE_GRANULARITY;
   }
+  default:
+	assert(false);
   }
 }
 
@@ -1605,7 +1609,7 @@ double assumedConfidence(const vector<Selector *> &selectors) {
 // to the NGram statistics counts.
 //Only suitable for NGrams ever observed in the training vocabulary.
 // applyConf: recalculate confidence levels
-double discount(Gram w, const WGConfig &conf, int c, bool applyConf) {
+void discount(Gram w, const WGConfig &conf, int c, bool applyConf) {
   size_t i = 0, l = w.size();
   vector<Selector *> selectors;
   selectors.assign(1 << max(conf.max_ng - conf.preserve_ng_tail, 0),
